@@ -47,12 +47,13 @@ make install
 keep all the interim build files in their own directory
 ```
 cd hello
-mkdir build 
+mkdir build
 cd build
 ../configure
 make
 make install
 ```
+
 
 ## Run the program
 $ hello
@@ -60,3 +61,13 @@ Hello World!
 This is hello 0.1.
 
 
+## Troubleshooting
+If you see erros in make after configure, you may need to regenerate configure with bootstrap.sh
+```
+mkdir build
+./bootstrap.sh
+cd build
+../configure
+make
+make install
+```
